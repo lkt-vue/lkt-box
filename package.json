@@ -1,0 +1,60 @@
+{
+  "name": "lkt-box",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "private": true,
+  "files": [
+    "dist/*",
+    "lkt-box.css",
+    "src/**/*.vue"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/lkt-box.es.js",
+      "require": "./dist/lkt-box.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "serve": "vite",
+    "build": "vite build && vue-tsc --emitDeclarationOnly --project tsconfig.json && mv dist/src dist/types && rm dist/vite.config.d.ts && rm dist/README.md.d.ts ",
+    "build2": "vite build",
+    "build3": "rm -rf public/dist/ && vite build && mv dist/ public/dist",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test-coverage": "vitest run --coverage"
+  },
+  "author": "Antonio Ibáñez",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.2",
+    "axios": "^0.27.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.5.1",
+    "downloadjs": "^1.4.7",
+    "html-loader": "^3.1.0",
+    "node-sass": "^7.0.1",
+    "path": "^0.12.7",
+    "postcss": "^8.4.5",
+    "postcss-loader": "^6.2.1",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.47.0",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "vite": "^4.4.9",
+    "vue-loader": "^17.0.0",
+    "vue-router": "^4.1.2",
+    "vuedraggable": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "process": "^0.11.10",
+    "sass": "^1.57.1",
+    "vue": "^3.2.37"
+  }
+}
