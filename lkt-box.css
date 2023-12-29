@@ -1,7 +1,7 @@
 .lkt-box {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    /*align-items: center;*/
+    /*justify-content: center;*/
     color: var(--text-color);
     box-shadow: var(--box-shadow);
     cursor: default;
