@@ -45,11 +45,12 @@ const _sfc_main = /* @__PURE__ */ defineComponent(__spreadProps(__spreadValues({
     };
   }
 }));
-const LktBox = {
+const LktBoxPlugin = {
   install: (app, options) => {
     app.component("lkt-box", _sfc_main);
   }
 };
 export {
-  LktBox as default
+  _sfc_main as LktBox,
+  LktBoxPlugin
 };
