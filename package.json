@@ -1,6 +1,6 @@
 {
   "name": "lkt-box",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "",
   "type": "module",
   "module": "./dist/lkt-box.js",
@@ -8,7 +8,8 @@
     ".": {
       "import": "./dist/lkt-box.js"
     },
-    "./styles": "./dist/style.css"
+    "./styles": "./dist/style.css",
+    "./lkt-box": "./src/lib-components/LktBox.vue"
   },
   "types": "./dist/lkt-box.d.ts",
   "files": ["dist/*", "src/**/*.vue"],

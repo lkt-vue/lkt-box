@@ -32,7 +32,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent(__spreadProps(__spreadValues({
     const classes = computed(() => {
       let r = ["lkt-box"];
       if (props.palette) {
-        r.push(`lkt-box--${props.palette}`);
+        r.push(`lkt-box--${props.palette}`, `palette-${props.palette}`);
       }
       return r.join(" ");
     });

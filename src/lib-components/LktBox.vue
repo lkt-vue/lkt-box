@@ -17,7 +17,7 @@ const classes = computed(() => {
     let r = ['lkt-box'];
 
     if (props.palette) {
-        r.push(`lkt-box--${props.palette}`);
+        r.push(`lkt-box--${props.palette}`, `palette-${props.palette}`);
     }
     return r.join(' ');
 })
