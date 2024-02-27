@@ -19,6 +19,7 @@ export default {
         lib: {
             entry: `${src}/index.ts`,
             name: 'LktBox',
+            fileName: 'build',
             formats: ['es']
         },
         outDir,
