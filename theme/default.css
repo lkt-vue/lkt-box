@@ -1,0 +1,28 @@
+:root {
+    /** Font */
+    --lkt-box-font-family: system-ui, Helvetica;
+    --lkt-box-font-size: 16px;
+    --lkt-box-font-weight: 300;
+    --lkt-box-line-height: 1.425;
+    --lkt-box-text-align: left;
+
+    /** Sizing */
+    --lkt-box-min-width: 100%;
+    --lkt-box-min-height: 35px;
+    --lkt-box-padding: 15px;
+    --lkt-box-gap: 5px;
+
+    /** Border */
+    --lkt-box-border-radius: 5px;
+    --lkt-box-border-width: 1px;
+    --lkt-box-border-style: solid;
+
+    /** Colors */
+    --lkt-box-color: #444444;
+    --lkt-box-bg: transparent;
+    --lkt-box-border-color: #ddd;
+
+    /** Effects */
+    --lkt-box-shadow: none;
+    --lkt-box-transition: all linear 100ms;
+}

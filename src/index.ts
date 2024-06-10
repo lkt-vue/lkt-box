@@ -1,6 +1,6 @@
 import LktBox from "./lib-components/LktBox.vue";
 import {App} from "vue";
-import "../lkt-box.css";
+import "../style.css";
 
 export const LktBoxPlugin = {
     install: (app: App, options?: {}) => {

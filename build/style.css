@@ -1,23 +1,22 @@
 .lkt-box {
     display: inline-flex;
-    /*align-items: center;*/
-    /*justify-content: center;*/
-    color: var(--text-color);
-    box-shadow: var(--box-shadow);
     cursor: default;
-    text-align: var(--box-text-align);
-    transition: var(--box-transition);
-    font-family: var(--box-font-family);
-    font-size: var(--box-font-size);
-    font-weight: var(--box-font-weight);
-    line-height: var(--box-line-height);
-    border-radius: var(--box-border-radius);
-    border-width: var(--box-border-width);
-    border-style: var(--box-border-style);
-    border-color: var(--box-border-color);
-    min-width: var(--box-min-width);
-    min-height: var(--box-min-height);
-    padding: var(--box-padding);
+    color: var(--lkt-box-color);
+    box-shadow: var(--lkt-box-shadow);
+    text-align: var(--lkt-box-text-align);
+    transition: var(--lkt-box-transition);
+    font-family: var(--lkt-box-font-family), serif;
+    font-size: var(--lkt-box-font-size);
+    font-weight: var(--lkt-box-font-weight);
+    line-height: var(--lkt-box-line-height);
+    border-radius: var(--lkt-box-border-radius);
+    border-width: var(--lkt-box-border-width);
+    border-style: var(--lkt-box-border-style);
+    border-color: var(--lkt-box-border-color);
+    min-width: var(--lkt-box-min-width);
+    min-height: var(--lkt-box-min-height);
+    padding: var(--lkt-box-padding);
+    background: var(--lkt-box-bg);
 }
 
 .lkt-box--alert {
