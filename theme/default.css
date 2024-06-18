@@ -1,4 +1,6 @@
 :root {
+    --lkt-box-flex-direction: row;
+
     /** Font */
     --lkt-box-font-family: system-ui, Helvetica;
     --lkt-box-font-size: 16px;

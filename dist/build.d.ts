@@ -1,4 +1,4 @@
-declare const i: import("vue").DefineComponent<{
+declare const _sfc_main: import("vue").DefineComponent<{
     palette: {
         default: string;
     };
@@ -8,7 +8,7 @@ declare const i: import("vue").DefineComponent<{
     class: {
         default: string;
     };
-}, (e: any, m: any) => import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
+}, (_ctx: any, _cache: any) => import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
     [key: string]: any;
 }>, any, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
     palette: {
@@ -25,7 +25,7 @@ declare const i: import("vue").DefineComponent<{
     class: string;
     palette: string;
 }, {}>;
-declare namespace k {
-    function install(l: any, t: any): void;
+export namespace LktBoxPlugin {
+    function install(app: any, options: any): void;
 }
-export { i as LktBox, k as LktBoxPlugin };
+export { _sfc_main as LktBox };

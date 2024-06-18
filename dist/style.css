@@ -1,6 +1,7 @@
 .lkt-box {
     display: inline-flex;
     cursor: default;
+    flex-direction: var(--lkt-box-flex-direction);
     color: var(--lkt-box-color);
     box-shadow: var(--lkt-box-shadow);
     text-align: var(--lkt-box-text-align);
