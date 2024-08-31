@@ -1,23 +1,38 @@
 declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<{
     palette: string;
+    title: string;
+    icon: string;
+    iconAtEnd: boolean;
     style: string;
     class: string;
 }>, {
     palette: string;
+    title: string;
+    icon: string;
+    iconAtEnd: boolean;
     style: string;
     class: string;
 }>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<{
     palette: string;
+    title: string;
+    icon: string;
+    iconAtEnd: boolean;
     style: string;
     class: string;
 }>, {
     palette: string;
+    title: string;
+    icon: string;
+    iconAtEnd: boolean;
     style: string;
     class: string;
 }>>>, {
     style: string;
+    title: string;
     class: string;
+    icon: string;
     palette: string;
+    iconAtEnd: boolean;
 }, {}>, {
     default?(_: {}): any;
 }>;

@@ -27,4 +27,13 @@
     /** Effects */
     --lkt-box-shadow: none;
     --lkt-box-transition: all linear 100ms;
+    
+    /** Header */
+    --lkt-box-header-justify-content: flex-start;
+    --lkt-box-header-font-weight: 400;
+    --lkt-box-header-padding: 15px;
+    --lkt-box-header-border-radius: 5px;
+    --lkt-box-header-bg: #ffffff;
+    --lkt-box-header-color: #444444;
+    --lkt-box-header-gap: 15px;
 }

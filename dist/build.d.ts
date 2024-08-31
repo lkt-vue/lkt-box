@@ -2,6 +2,16 @@ declare const _sfc_main: import("vue").DefineComponent<{
     palette: {
         default: string;
     };
+    title: {
+        default: string;
+    };
+    icon: {
+        default: string;
+    };
+    iconAtEnd: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     style: {
         default: string;
     };
@@ -14,6 +24,16 @@ declare const _sfc_main: import("vue").DefineComponent<{
     palette: {
         default: string;
     };
+    title: {
+        default: string;
+    };
+    icon: {
+        default: string;
+    };
+    iconAtEnd: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     style: {
         default: string;
     };
@@ -22,8 +42,11 @@ declare const _sfc_main: import("vue").DefineComponent<{
     };
 }>>, {
     style: string;
+    title: string;
     class: string;
+    icon: string;
     palette: string;
+    iconAtEnd: boolean;
 }, {}>;
 export namespace LktBoxPlugin {
     function install(app: any, options: any): void;
