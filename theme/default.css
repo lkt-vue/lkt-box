@@ -1,5 +1,6 @@
 :root {
-    --lkt-box-flex-direction: row;
+    --lkt-box-flex-direction: column;
+    --lkt-box-flex-direction-content: column;
 
     /** Font */
     --lkt-box-font-family: system-ui, Helvetica;
@@ -12,7 +13,9 @@
     --lkt-box-min-width: 100%;
     --lkt-box-min-height: 35px;
     --lkt-box-padding: 15px;
+    --lkt-box-padding-content: 15px;
     --lkt-box-gap: 5px;
+    --lkt-box-gap-content: 5px;
 
     /** Border */
     --lkt-box-border-radius: 5px;

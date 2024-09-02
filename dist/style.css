@@ -43,6 +43,13 @@
     border-bottom-right-radius: var(--lkt-box-header-border-radius);
 }
 
+.lkt-box-content {
+    display: flex;
+    flex-direction: var(--lkt-box-flex-direction);
+    padding: var(--lkt-box-padding-content);
+    gap: var(--lkt-box-gap);
+}
+
 .lkt-box--alert {
     background: var(--alert-color);
     color: var(--alert-contrast);

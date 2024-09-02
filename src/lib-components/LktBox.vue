@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {computed} from 'vue';
+import {computed, useSlots} from 'vue';
 import {__} from "lkt-i18n";
 
 const props = withDefaults(defineProps<{
@@ -32,6 +32,8 @@ const classes = computed(() => {
         }
         return props.title;
     });
+
+const slots = useSlots();
 </script>
 
 <template>
@@ -43,6 +45,8 @@ const classes = computed(() => {
                 <i v-if="icon && iconAtEnd" :class="icon"/>
             </div>
         </header>
-        <slot name="default"/>
+        <div class="lkt-box-content" v-if="slots.default">
+            <slot name="default"/>
+        </div>
     </section>
 </template>

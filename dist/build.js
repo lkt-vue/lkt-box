@@ -1,10 +1,14 @@
-import { defineComponent, computed, openBlock, createElementBlock, normalizeClass, normalizeStyle, createElementVNode, createCommentVNode, createTextVNode, toDisplayString, renderSlot } from "vue";
+import { defineComponent, computed, useSlots, openBlock, createElementBlock, normalizeClass, normalizeStyle, createElementVNode, createCommentVNode, createTextVNode, toDisplayString, unref, renderSlot } from "vue";
 import { __ } from "lkt-i18n";
 const _hoisted_1 = {
   key: 0,
   class: "lkt-box-header"
 };
 const _hoisted_2 = { class: "lkt-box-title" };
+const _hoisted_3 = {
+  key: 1,
+  class: "lkt-box-content"
+};
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "LktBox",
   props: {
@@ -30,6 +34,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }
       return props.title;
     });
+    const slots = useSlots();
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("section", {
         class: normalizeClass(classes.value),
@@ -48,7 +53,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             }, null, 2)) : createCommentVNode("", true)
           ])
         ])) : createCommentVNode("", true),
-        renderSlot(_ctx.$slots, "default")
+        unref(slots).default ? (openBlock(), createElementBlock("div", _hoisted_3, [
+          renderSlot(_ctx.$slots, "default")
+        ])) : createCommentVNode("", true)
       ], 6);
     };
   }
