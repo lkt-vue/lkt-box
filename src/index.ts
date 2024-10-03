@@ -1,11 +1,13 @@
-import LktBox from "./lib-components/LktBox.vue";
+import {default as libComponent} from "./lib-components/LktBox.vue";
 import {App} from "vue";
 import "../style.css";
 
-export const LktBoxPlugin = {
+export const LktBox = {
     install: (app: App, options?: {}) => {
-        app.component('lkt-box', LktBox);
+
+        // Register plugin components
+        if (app.component('lkt-box') === undefined)  app.component('lkt-box', libComponent);
     },
 };
 
-export {LktBox};
+export default LktBox;

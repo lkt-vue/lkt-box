@@ -12,7 +12,6 @@ const _hoisted_3 = {
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "LktBox",
   props: {
-    palette: { default: "" },
     title: { default: "" },
     icon: { default: "" },
     iconAtEnd: { type: Boolean, default: false },
@@ -22,9 +21,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   setup(__props) {
     const props = __props;
     const classes = computed(() => {
-      let r = ["lkt-box"];
-      if (props.palette)
-        r.push(`lkt-box--${props.palette}`, `palette-${props.palette}`);
+      let r = [];
       if (props.class)
         r.push(props.class);
       return r.join(" ");
@@ -37,7 +34,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const slots = useSlots();
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("section", {
-        class: normalizeClass(classes.value),
+        class: normalizeClass(["lkt-box", classes.value]),
         style: normalizeStyle(_ctx.style)
       }, [
         computedTitle.value.length > 0 ? (openBlock(), createElementBlock("header", _hoisted_1, [
@@ -60,12 +57,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const LktBoxPlugin = {
+const LktBox = {
   install: (app, options) => {
-    app.component("lkt-box", _sfc_main);
+    if (app.component("lkt-box") === void 0)
+      app.component("lkt-box", _sfc_main);
   }
 };
 export {
-  _sfc_main as LktBox,
-  LktBoxPlugin
+  LktBox,
+  LktBox as default
 };

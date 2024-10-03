@@ -3,14 +3,12 @@ import {computed, useSlots} from 'vue';
 import {__} from "lkt-i18n";
 
 const props = withDefaults(defineProps<{
-    palette: string
     title: string
     icon: string
     iconAtEnd: boolean
     style: string
     class: string
 }>(), {
-    palette: '',
     title: '',
     icon: '',
     iconAtEnd: false,
@@ -19,9 +17,7 @@ const props = withDefaults(defineProps<{
 });
 
 const classes = computed(() => {
-        let r = ['lkt-box'];
-
-        if (props.palette) r.push(`lkt-box--${props.palette}`, `palette-${props.palette}`);
+        let r = [];
         if (props.class) r.push(props.class);
         return r.join(' ');
     }),
@@ -37,7 +33,7 @@ const slots = useSlots();
 </script>
 
 <template>
-    <section v-bind:class="classes" :style="style">
+    <section class="lkt-box" v-bind:class="classes" :style="style">
         <header class="lkt-box-header" v-if="computedTitle.length > 0">
             <div class="lkt-box-title">
                 <i v-if="icon && !iconAtEnd" :class="icon"/>

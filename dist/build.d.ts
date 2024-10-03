@@ -1,7 +1,4 @@
 declare const _sfc_main: import("vue").DefineComponent<{
-    palette: {
-        default: string;
-    };
     title: {
         default: string;
     };
@@ -21,9 +18,6 @@ declare const _sfc_main: import("vue").DefineComponent<{
 }, (_ctx: any, _cache: any) => import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
     [key: string]: any;
 }>, any, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
-    palette: {
-        default: string;
-    };
     title: {
         default: string;
     };
@@ -45,7 +39,6 @@ declare const _sfc_main: import("vue").DefineComponent<{
     title: string;
     class: string;
     icon: string;
-    palette: string;
     iconAtEnd: boolean;
 }, {}>;
 export namespace LktBoxPlugin {
