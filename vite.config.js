@@ -25,7 +25,17 @@ export default {
         outDir,
         minify: false,
         rollupOptions: {
-            external: ['vue', 'vue-router', 'lkt-fields', 'lkt-button', 'lkt-string-tools', 'lkt-http', 'lkt-i18n', 'lkt-session'],
+            external: [
+                'vue',
+                'vue-router',
+                'lkt-fields',
+                'lkt-button',
+                'lkt-string-tools',
+                'lkt-http',
+                'lkt-i18n',
+                'lkt-session',
+                'lkt-vue-kernel',
+            ],
             output: {
                 globals: {
                     vue: 'Vue',

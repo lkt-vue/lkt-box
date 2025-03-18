@@ -1,55 +1,42 @@
-declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<{
+type __VLS_Props = {
     title: string;
     icon: string;
     iconAtEnd: boolean;
     style: string;
     class: string;
-}>, {
-    title: string;
-    icon: string;
-    iconAtEnd: boolean;
-    style: string;
-    class: string;
-}>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<{
-    title: string;
-    icon: string;
-    iconAtEnd: boolean;
-    style: string;
-    class: string;
-}>, {
-    title: string;
-    icon: string;
-    iconAtEnd: boolean;
-    style: string;
-    class: string;
-}>>>, {
-    style: string;
-    title: string;
-    class: string;
-    icon: string;
-    iconAtEnd: boolean;
-}, {}>, {
-    default?(_: {}): any;
+};
+declare const slots: Readonly<{
+    [name: string]: import("vue").Slot<any> | undefined;
 }>;
+declare const classes: import("vue").ComputedRef<string>, computedTitle: import("vue").ComputedRef<any>;
+declare const __VLS_ctx: InstanceType<__VLS_PickNotAny<typeof __VLS_self, new () => {}>>;
+declare var __VLS_1: {}, __VLS_3: {};
+type __VLS_Slots = __VLS_PrettifyGlobal<__VLS_OmitStringIndex<typeof __VLS_ctx.$slots> & {
+    header?: (props: typeof __VLS_1) => any;
+} & {
+    default?: (props: typeof __VLS_3) => any;
+}>;
+declare const __VLS_self: import("vue").DefineComponent<__VLS_Props, {
+    slots: typeof slots;
+    classes: typeof classes;
+    computedTitle: typeof computedTitle;
+}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{}>, {
+    style: string;
+    title: string;
+    class: string;
+    icon: string;
+    iconAtEnd: boolean;
+}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+declare const __VLS_component: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{}>, {
+    style: string;
+    title: string;
+    class: string;
+    icon: string;
+    iconAtEnd: boolean;
+}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+declare const _default: __VLS_WithSlots<typeof __VLS_component, __VLS_Slots>;
 export default _default;
-type __VLS_NonUndefinedable<T> = T extends undefined ? never : T;
-type __VLS_TypePropsToRuntimeProps<T> = {
-    [K in keyof T]-?: {} extends Pick<T, K> ? {
-        type: import('vue').PropType<__VLS_NonUndefinedable<T[K]>>;
-    } : {
-        type: import('vue').PropType<T[K]>;
-        required: true;
-    };
-};
-type __VLS_WithDefaults<P, D> = {
-    [K in keyof Pick<P, keyof P>]: K extends keyof D ? __VLS_Prettify<P[K] & {
-        default: D[K];
-    }> : P[K];
-};
-type __VLS_Prettify<T> = {
-    [K in keyof T]: T[K];
-} & {};
-type __VLS_WithTemplateSlots<T, S> = T & {
+type __VLS_WithSlots<T, S> = T & {
     new (): {
         $slots: S;
     };

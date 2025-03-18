@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {computed, useSlots} from 'vue';
-import {__} from "lkt-i18n";
+import {extractI18nValue} from "lkt-vue-kernel";
 
 const props = withDefaults(defineProps<{
     title: string
@@ -16,6 +16,8 @@ const props = withDefaults(defineProps<{
     class: '',
 });
 
+const slots = useSlots();
+
 const classes = computed(() => {
         let r = [];
         if (props.class) r.push(props.class);
@@ -23,21 +25,21 @@ const classes = computed(() => {
     }),
 
     computedTitle = computed(() => {
-        if (props.title.startsWith('__:')) {
-            return __(props.title.substring(3));
-        }
-        return props.title;
+        return extractI18nValue(props.title);
     });
-
-const slots = useSlots();
 </script>
 
 <template>
     <section class="lkt-box" v-bind:class="classes" :style="style">
-        <header class="lkt-box-header" v-if="computedTitle.length > 0">
+        <header class="lkt-box-header" v-if="computedTitle.length > 0 || slots.header">
             <div class="lkt-box-title">
                 <i v-if="icon && !iconAtEnd" :class="icon"/>
-                {{ computedTitle }}
+                <template v-if="slots.header">
+                    <slot name="header"/>
+                </template>
+                <template v-else>
+                    {{ computedTitle }}
+                </template>
                 <i v-if="icon && iconAtEnd" :class="icon"/>
             </div>
         </header>
