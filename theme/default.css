@@ -13,9 +13,7 @@
     --lkt-box-min-width: 100%;
     --lkt-box-min-height: 35px;
     --lkt-box-padding: 15px;
-    --lkt-box-padding-content: 15px;
     --lkt-box-gap: 5px;
-    --lkt-box-gap-content: 5px;
 
     /** Border */
     --lkt-box-border-radius: 5px;
@@ -32,11 +30,20 @@
     --lkt-box-transition: all linear 100ms;
     
     /** Header */
-    --lkt-box-header-justify-content: flex-start;
-    --lkt-box-header-font-weight: 400;
-    --lkt-box-header-padding: 15px;
-    --lkt-box-header-border-radius: 5px;
-    --lkt-box-header-bg: #ffffff;
-    --lkt-box-header-color: #444444;
-    --lkt-box-header-gap: 15px;
+    --lkt-box--header--justify-content: flex-start;
+    --lkt-box--header--font-weight: 400;
+    --lkt-box--header--padding: 15px;
+    --lkt-box--header--border-radius: 5px;
+    --lkt-box--header--bg: transparent;
+    --lkt-box--header--color: #444444;
+    --lkt-box--header--gap: 15px;
+
+    /** Content */
+    --lkt-box--content--flex-direction: column;
+    --lkt-box--content--padding: 15px;
+    --lkt-box--content--bg: transparent;
+    --lkt-box--content--border-radius: 5px;
+    --lkt-box--content--border-width: 0;
+    --lkt-box--content--border-style: solid;
+    --lkt-box--content--border-color: #444444;
 }
