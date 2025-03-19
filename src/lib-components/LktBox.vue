@@ -1,20 +1,8 @@
 <script setup lang="ts">
 import {computed, useSlots} from 'vue';
-import {extractI18nValue} from "lkt-vue-kernel";
+import {Box, BoxConfig, extractI18nValue, getDefaultValues} from "lkt-vue-kernel";
 
-const props = withDefaults(defineProps<{
-    title: string
-    icon: string
-    iconAtEnd: boolean
-    style: string
-    class: string
-}>(), {
-    title: '',
-    icon: '',
-    iconAtEnd: false,
-    style: '',
-    class: '',
-});
+const props = withDefaults(defineProps<BoxConfig>(), getDefaultValues(Box));
 
 const slots = useSlots();
 
@@ -33,14 +21,20 @@ const classes = computed(() => {
     <section class="lkt-box" v-bind:class="classes" :style="style">
         <header class="lkt-box-header" v-if="computedTitle.length > 0 || slots.header">
             <div class="lkt-box-title">
-                <i v-if="icon && !iconAtEnd" :class="icon"/>
+                <template v-if="typeof icon === 'object' && !iconAtEnd">
+                    <lkt-icon v-bind="icon"/>
+                </template>
+                <i v-else-if="icon && !iconAtEnd" :class="icon"/>
                 <template v-if="slots.header">
                     <slot name="header"/>
                 </template>
                 <template v-else>
                     {{ computedTitle }}
                 </template>
-                <i v-if="icon && iconAtEnd" :class="icon"/>
+                <template v-if="typeof icon === 'object' && iconAtEnd">
+                    <lkt-icon v-bind="icon"/>
+                </template>
+                <i v-else-if="icon && iconAtEnd" :class="icon"/>
             </div>
         </header>
         <div class="lkt-box-content" v-if="slots.default">

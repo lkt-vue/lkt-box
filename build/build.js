@@ -1,5 +1,5 @@
-import { defineComponent, useSlots, computed, createElementBlock, openBlock, normalizeStyle, normalizeClass, createCommentVNode, unref, createElementVNode, renderSlot, Fragment, createTextVNode, toDisplayString } from "vue";
-import { extractI18nValue } from "lkt-vue-kernel";
+import { defineComponent, mergeDefaults, useSlots, computed, resolveComponent, createElementBlock, openBlock, normalizeStyle, normalizeClass, createCommentVNode, unref, createElementVNode, createBlock, renderSlot, normalizeProps, mergeProps, Fragment, createTextVNode, toDisplayString } from "vue";
+import { extractI18nValue, getDefaultValues, Box } from "lkt-vue-kernel";
 const _hoisted_1 = {
   key: 0,
   class: "lkt-box-header"
@@ -11,13 +11,13 @@ const _hoisted_3 = {
 };
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "LktBox",
-  props: {
-    title: { default: "" },
-    icon: { default: "" },
-    iconAtEnd: { type: Boolean, default: false },
-    style: { default: "" },
-    class: { default: "" }
-  },
+  props: /* @__PURE__ */ mergeDefaults({
+    title: {},
+    iconAtEnd: { type: Boolean },
+    style: {},
+    class: {},
+    icon: {}
+  }, getDefaultValues(Box)),
   setup(__props) {
     const props = __props;
     const slots = useSlots();
@@ -29,21 +29,22 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       return extractI18nValue(props.title);
     });
     return (_ctx, _cache) => {
+      const _component_lkt_icon = resolveComponent("lkt-icon");
       return openBlock(), createElementBlock("section", {
         class: normalizeClass(["lkt-box", classes.value]),
         style: normalizeStyle(_ctx.style)
       }, [
         computedTitle.value.length > 0 || unref(slots).header ? (openBlock(), createElementBlock("header", _hoisted_1, [
           createElementVNode("div", _hoisted_2, [
-            _ctx.icon && !_ctx.iconAtEnd ? (openBlock(), createElementBlock("i", {
-              key: 0,
+            typeof _ctx.icon === "object" && !_ctx.iconAtEnd ? (openBlock(), createBlock(_component_lkt_icon, normalizeProps(mergeProps({ key: 0 }, _ctx.icon)), null, 16)) : _ctx.icon && !_ctx.iconAtEnd ? (openBlock(), createElementBlock("i", {
+              key: 1,
               class: normalizeClass(_ctx.icon)
             }, null, 2)) : createCommentVNode("", true),
-            unref(slots).header ? renderSlot(_ctx.$slots, "header", { key: 1 }) : (openBlock(), createElementBlock(Fragment, { key: 2 }, [
+            unref(slots).header ? renderSlot(_ctx.$slots, "header", { key: 2 }) : (openBlock(), createElementBlock(Fragment, { key: 3 }, [
               createTextVNode(toDisplayString(computedTitle.value), 1)
             ], 64)),
-            _ctx.icon && _ctx.iconAtEnd ? (openBlock(), createElementBlock("i", {
-              key: 3,
+            typeof _ctx.icon === "object" && _ctx.iconAtEnd ? (openBlock(), createBlock(_component_lkt_icon, normalizeProps(mergeProps({ key: 4 }, _ctx.icon)), null, 16)) : _ctx.icon && _ctx.iconAtEnd ? (openBlock(), createElementBlock("i", {
+              key: 5,
               class: normalizeClass(_ctx.icon)
             }, null, 2)) : createCommentVNode("", true)
           ])
