@@ -1,5 +1,5 @@
 .lkt-box {
-    display: inline-flex;
+    display: var(--lkt-box-display);
     cursor: default;
     flex-direction: var(--lkt-box-flex-direction);
     color: var(--lkt-box-color);
@@ -22,8 +22,8 @@
 }
 
 .lkt-box-header {
-    display: flex;
-    align-items: center;
+    display: var(--lkt-box--header--justify-content, flex);
+    align-items: var(--lkt-box--header--align-items, center);
     justify-content: var(--lkt-box--header--justify-content, flex-start);
     gap: var(--lkt-box--header--gap);
     background: var(--lkt-box--header--bg);
@@ -56,7 +56,7 @@
 }
 
 .lkt-box-title {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    display: var(--lkt-box--title--display);
+    align-items: var(--lkt-box--title--align-items);
+    gap: var(--lkt-box--title--gap);
 }
