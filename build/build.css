@@ -1,24 +1,24 @@
 .lkt-box {
-    display: var(--lkt-box-display);
+    display: var(--lkt-box--display);
     cursor: default;
-    flex-direction: var(--lkt-box-flex-direction);
-    color: var(--lkt-box-color);
-    box-shadow: var(--lkt-box-shadow);
-    text-align: var(--lkt-box-text-align);
-    transition: var(--lkt-box-transition);
-    font-family: var(--lkt-box-font-family), serif;
-    font-size: var(--lkt-box-font-size);
-    font-weight: var(--lkt-box-font-weight);
-    line-height: var(--lkt-box-line-height);
-    border-radius: var(--lkt-box-border-radius);
-    border-width: var(--lkt-box-border-width);
-    border-style: var(--lkt-box-border-style);
-    border-color: var(--lkt-box-border-color);
-    min-width: var(--lkt-box-min-width);
-    min-height: var(--lkt-box-min-height);
-    padding: var(--lkt-box-padding);
-    background: var(--lkt-box-bg);
-    gap: var(--lkt-box-gap);
+    flex-direction: var(--lkt-box--flex-direction);
+    color: var(--lkt-box--color);
+    box-shadow: var(--lkt-box--shadow);
+    text-align: var(--lkt-box--text-align);
+    transition: var(--lkt-box--transition);
+    font-family: var(--lkt-box--font-family), serif;
+    font-size: var(--lkt-box--font-size);
+    font-weight: var(--lkt-box--font-weight);
+    line-height: var(--lkt-box--line-height);
+    border-radius: var(--lkt-box--border-radius);
+    border-width: var(--lkt-box--border-width);
+    border-style: var(--lkt-box--border-style);
+    border-color: var(--lkt-box--border-color);
+    min-width: var(--lkt-box--min-width);
+    min-height: var(--lkt-box--min-height);
+    padding: var(--lkt-box--padding);
+    background: var(--lkt-box--background);
+    gap: var(--lkt-box--gap);
 }
 
 .lkt-box-header {
@@ -47,7 +47,7 @@
     display: flex;
     flex-direction: var(--lkt-box--content--flex-direction);
     padding: var(--lkt-box--content--padding);
-    gap: var(--lkt-box-gap);
+    gap: var(--lkt-box--gap);
     border-radius: var(--lkt-box--content--border-radius);
     border-width: var(--lkt-box--content--border-width);
     border-style: var(--lkt-box--content--border-style);
