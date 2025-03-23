@@ -3,7 +3,7 @@
     cursor: default;
     flex-direction: var(--lkt-box--flex-direction);
     color: var(--lkt-box--color);
-    box-shadow: var(--lkt-box--shadow);
+    box-shadow: var(--lkt-box--box-shadow);
     text-align: var(--lkt-box--text-align);
     transition: var(--lkt-box--transition);
     font-family: var(--lkt-box--font-family), serif;
@@ -26,7 +26,7 @@
     align-items: var(--lkt-box--header--align-items, center);
     justify-content: var(--lkt-box--header--justify-content, flex-start);
     gap: var(--lkt-box--header--gap);
-    background: var(--lkt-box--header--bg);
+    background: var(--lkt-box--header--background);
     font-weight: var(--lkt-box--header--font-weight);
     color: var(--lkt-box--header--color);
     padding: var(--lkt-box--header--padding);
@@ -52,7 +52,7 @@
     border-width: var(--lkt-box--content--border-width);
     border-style: var(--lkt-box--content--border-style);
     border-color: var(--lkt-box--content--border-color);
-    background: var(--lkt-box--content--bg);
+    background: var(--lkt-box--content--background);
 }
 
 .lkt-box-title {

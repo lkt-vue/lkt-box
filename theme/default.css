@@ -1,56 +1,46 @@
 .lkt-box {
+    --lkt-box--background: transparent;
+    --lkt-box--border-color: #ddd;
+    --lkt-box--border-radius: 5px;
+    --lkt-box--border-style: solid;
+    --lkt-box--border-width: 1px;
+    --lkt-box--box-shadow: none;
+    --lkt-box--color: #444444;
     --lkt-box--display: inline-flex;
     --lkt-box--flex-direction: column;
-
-    /** Font */
     --lkt-box--font-family: system-ui, Helvetica;
     --lkt-box--font-size: 16px;
     --lkt-box--font-weight: 300;
+    --lkt-box--gap: 5px;
     --lkt-box--line-height: 1.425;
-    --lkt-box--text-align: left;
-
-    /** Sizing */
     --lkt-box--min-width: 100%;
     --lkt-box--min-height: 35px;
     --lkt-box--padding: 15px;
-    --lkt-box--gap: 5px;
-
-    /** Border */
-    --lkt-box--border-radius: 5px;
-    --lkt-box--border-width: 1px;
-    --lkt-box--border-style: solid;
-
-    /** Colors */
-    --lkt-box--color: #444444;
-    --lkt-box--background: transparent;
-    --lkt-box--border-color: #ddd;
-
-    /** Effects */
-    --lkt-box--shadow: none;
+    --lkt-box--text-align: left;
     --lkt-box--transition: all linear 100ms;
     
-    /** Header */
-    --lkt-box--header--display: flex;
+    /** Element: Header */
     --lkt-box--header--align-items: center;
-    --lkt-box--header--justify-content: flex-start;
-    --lkt-box--header--font-weight: 400;
-    --lkt-box--header--padding: 15px;
+    --lkt-box--header--background: transparent;
     --lkt-box--header--border-radius: 5px;
-    --lkt-box--header--bg: transparent;
     --lkt-box--header--color: #444444;
+    --lkt-box--header--display: flex;
+    --lkt-box--header--font-weight: 400;
     --lkt-box--header--gap: 15px;
+    --lkt-box--header--justify-content: flex-start;
+    --lkt-box--header--padding: 15px;
 
-    /** Content */
+    /** Element: Content */
+    --lkt-box--content--background: transparent;
+    --lkt-box--content--border-color: #444444;
+    --lkt-box--content--border-radius: 5px;
+    --lkt-box--content--border-style: solid;
+    --lkt-box--content--border-width: 0;
     --lkt-box--content--flex-direction: column;
     --lkt-box--content--padding: 15px;
-    --lkt-box--content--bg: transparent;
-    --lkt-box--content--border-radius: 5px;
-    --lkt-box--content--border-width: 0;
-    --lkt-box--content--border-style: solid;
-    --lkt-box--content--border-color: #444444;
 
-    /** Title */
+    /** Element: Title */
+    --lkt-box--title--align-items: center;
     --lkt-box--title--display: flex;
-    --lkt-box--title--align-items: flex;
     --lkt-box--title--gap: 5px;
 }
