@@ -40,5 +40,9 @@ const classes = computed(() => {
         <div class="lkt-box-content" v-if="slots.default">
             <slot name="default"/>
         </div>
+
+        <template v-if="slots['web-element-actions']">
+            <slot name="web-element-actions"/>
+        </template>
     </section>
 </template>

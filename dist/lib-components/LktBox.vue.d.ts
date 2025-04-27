@@ -4,11 +4,13 @@ declare const slots: Readonly<{
 }>;
 declare const classes: import("vue").ComputedRef<string>, computedTitle: import("vue").ComputedRef<any>;
 declare const __VLS_ctx: InstanceType<__VLS_PickNotAny<typeof __VLS_self, new () => {}>>;
-declare var __VLS_5: {}, __VLS_11: {};
+declare var __VLS_5: {}, __VLS_11: {}, __VLS_13: {};
 type __VLS_Slots = __VLS_PrettifyGlobal<__VLS_OmitStringIndex<typeof __VLS_ctx.$slots> & {
     header?: (props: typeof __VLS_5) => any;
 } & {
     default?: (props: typeof __VLS_11) => any;
+} & {
+    'web-element-actions'?: (props: typeof __VLS_13) => any;
 }>;
 declare const __VLS_self: import("vue").DefineComponent<BoxConfig, {
     slots: typeof slots;

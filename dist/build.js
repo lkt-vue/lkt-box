@@ -1,4 +1,4 @@
-import { defineComponent, mergeDefaults, useSlots, computed, resolveComponent, createElementBlock, openBlock, normalizeStyle, normalizeClass, createCommentVNode, unref, createElementVNode, createBlock, renderSlot, normalizeProps, mergeProps, Fragment, createTextVNode, toDisplayString } from "vue";
+import { defineComponent, mergeDefaults, useSlots, computed, resolveComponent, createElementBlock, openBlock, normalizeStyle, normalizeClass, createCommentVNode, renderSlot, unref, createElementVNode, createBlock, normalizeProps, mergeProps, Fragment, createTextVNode, toDisplayString } from "vue";
 import { extractI18nValue, getDefaultValues, Box } from "lkt-vue-kernel";
 const _hoisted_1 = {
   key: 0,
@@ -51,7 +51,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         ])) : createCommentVNode("", true),
         unref(slots).default ? (openBlock(), createElementBlock("div", _hoisted_3, [
           renderSlot(_ctx.$slots, "default")
-        ])) : createCommentVNode("", true)
+        ])) : createCommentVNode("", true),
+        unref(slots)["web-element-actions"] ? renderSlot(_ctx.$slots, "web-element-actions", { key: 2 }) : createCommentVNode("", true)
       ], 6);
     };
   }
