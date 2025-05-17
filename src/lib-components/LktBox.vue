@@ -37,7 +37,7 @@ const classes = computed(() => {
                 <i v-else-if="icon && iconAtEnd" :class="icon"/>
             </div>
         </header>
-        <div class="lkt-box-content" v-if="slots.default">
+        <div class="lkt-box-content" :class="contentClass" v-if="slots.default">
             <slot name="default"/>
         </div>
 

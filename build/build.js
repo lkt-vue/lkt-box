@@ -5,10 +5,6 @@ const _hoisted_1 = {
   class: "lkt-box-header"
 };
 const _hoisted_2 = { class: "lkt-box-title" };
-const _hoisted_3 = {
-  key: 1,
-  class: "lkt-box-content"
-};
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "LktBox",
   props: /* @__PURE__ */ mergeDefaults({
@@ -16,6 +12,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     iconAtEnd: { type: Boolean },
     style: {},
     class: {},
+    contentClass: {},
     icon: {}
   }, getDefaultValues(Box)),
   setup(__props) {
@@ -49,9 +46,12 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             }, null, 2)) : createCommentVNode("", true)
           ])
         ])) : createCommentVNode("", true),
-        unref(slots).default ? (openBlock(), createElementBlock("div", _hoisted_3, [
+        unref(slots).default ? (openBlock(), createElementBlock("div", {
+          key: 1,
+          class: normalizeClass(["lkt-box-content", _ctx.contentClass])
+        }, [
           renderSlot(_ctx.$slots, "default")
-        ])) : createCommentVNode("", true),
+        ], 2)) : createCommentVNode("", true),
         unref(slots)["web-element-actions"] ? renderSlot(_ctx.$slots, "web-element-actions", { key: 2 }) : createCommentVNode("", true)
       ], 6);
     };

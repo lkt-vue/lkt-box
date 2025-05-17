@@ -21,6 +21,7 @@ declare const __VLS_self: import("vue").DefineComponent<BoxConfig, {
     title: string;
     class: string;
     icon: import("lkt-vue-kernel").IconConfig | string;
+    contentClass: string;
     iconAtEnd: boolean;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
 declare const __VLS_component: import("vue").DefineComponent<BoxConfig, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<BoxConfig> & Readonly<{}>, {
@@ -28,6 +29,7 @@ declare const __VLS_component: import("vue").DefineComponent<BoxConfig, {}, {}, 
     title: string;
     class: string;
     icon: import("lkt-vue-kernel").IconConfig | string;
+    contentClass: string;
     iconAtEnd: boolean;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
 declare const _default: __VLS_WithSlots<typeof __VLS_component, __VLS_Slots>;
