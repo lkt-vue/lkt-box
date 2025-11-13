@@ -2,21 +2,23 @@ import { BoxConfig } from "lkt-vue-kernel";
 declare const slots: Readonly<{
     [name: string]: import("vue").Slot<any> | undefined;
 }>;
-declare const classes: import("vue").ComputedRef<string>, computedTitle: import("vue").ComputedRef<any>;
+declare const classes: import("vue").ComputedRef<string>, computedTitle: import("vue").ComputedRef<any>, displayLktHeader: import("vue").ComputedRef<boolean>;
 declare const __VLS_ctx: InstanceType<__VLS_PickNotAny<typeof __VLS_self, new () => {}>>;
-declare var __VLS_5: {}, __VLS_11: {}, __VLS_13: {};
+declare var __VLS_9: {}, __VLS_15: {}, __VLS_17: {};
 type __VLS_Slots = __VLS_PrettifyGlobal<__VLS_OmitStringIndex<typeof __VLS_ctx.$slots> & {
-    header?: (props: typeof __VLS_5) => any;
+    header?: (props: typeof __VLS_9) => any;
 } & {
-    default?: (props: typeof __VLS_11) => any;
+    default?: (props: typeof __VLS_15) => any;
 } & {
-    'web-element-actions'?: (props: typeof __VLS_13) => any;
+    'web-element-actions'?: (props: typeof __VLS_17) => any;
 }>;
 declare const __VLS_self: import("vue").DefineComponent<BoxConfig, {
     slots: typeof slots;
     classes: typeof classes;
     computedTitle: typeof computedTitle;
+    displayLktHeader: typeof displayLktHeader;
 }, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<BoxConfig> & Readonly<{}>, {
+    header: import("lkt-vue-kernel").HeaderConfig;
     style: string;
     title: string;
     class: string;
@@ -25,6 +27,7 @@ declare const __VLS_self: import("vue").DefineComponent<BoxConfig, {
     iconAtEnd: boolean;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
 declare const __VLS_component: import("vue").DefineComponent<BoxConfig, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<BoxConfig> & Readonly<{}>, {
+    header: import("lkt-vue-kernel").HeaderConfig;
     style: string;
     title: string;
     class: string;

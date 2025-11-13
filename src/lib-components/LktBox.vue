@@ -14,12 +14,17 @@ const classes = computed(() => {
 
     computedTitle = computed(() => {
         return extractI18nValue(props.title);
+    }),
+    displayLktHeader = computed(() => {
+        return typeof props.header === 'object'
+            && Object.keys(props.header).length > 0;
     });
 </script>
 
 <template>
     <section class="lkt-box" v-bind:class="classes" :style="style">
-        <header class="lkt-box-header" v-if="computedTitle.length > 0 || slots.header">
+        <lkt-header v-if="displayLktHeader" v-bind="header"/>
+        <header class="lkt-box-header" v-else-if="computedTitle.length > 0 || slots.header">
             <div class="lkt-box-title">
                 <template v-if="typeof icon === 'object' && !iconAtEnd">
                     <lkt-icon v-bind="icon"/>
